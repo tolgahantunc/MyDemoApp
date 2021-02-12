@@ -1,0 +1,20 @@
+﻿@model MyDemoApp.Models.User
+
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<div>
+    <fieldset>
+    <legend> User DashBoard </legend>
+
+    @if (Session["UserName"] != null)
+    {<text>
+        Welcome @Session["UserName"].ToString() </text>
+        } </fieldset>
+    </div>
+<p>
+    @Html.ActionLink("Back to Login", "Login")
+</p>
